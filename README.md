@@ -74,9 +74,6 @@ class GreetListener implements Listener {
 
 // last but not least, register the listener
 EventHandler::registerEvents(new GreetListener());
-// or
-EventHandler::registerEvents(new GreetListener('Jens'));
-// would output 'Hello Jens'
 ```
 
 After all, we need to fire that:
@@ -87,6 +84,9 @@ use example\events\GreetEvent;
 use jens1o\event\EventHandler;
 
 EventHandler::fireEvent(new GreetEvent());
+// or
+EventHandler::registerEvents(new GreetListener('Jens'));
+// would output 'Hello Jens'
 
 ```
 
