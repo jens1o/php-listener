@@ -50,6 +50,8 @@ after that, we'll create the listener, where you need to implement the ```jens1o
 ```php
 <?php
 
+namespace example\listeners;
+
 use example\events\GreetEvent;
 use jens1o\event\EventHandler;
 use jens1o\event\Listener;
