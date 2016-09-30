@@ -6,7 +6,6 @@ spl_autoload_register(function ($className) {
         // Our beer
         array_shift($parts);
         $path = 'lib/' . implode('/', $parts) . '.class.php';
-        echo PHP_EOL . $path . PHP_EOL;
         if(is_readable($path)) {
             require_once $path;
             return true;
