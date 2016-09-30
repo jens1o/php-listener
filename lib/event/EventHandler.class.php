@@ -82,7 +82,7 @@ class EventHandler {
 	 * Private helper function to throw exception when a error while registering occured
 	 * 
 	 * @param \ReflectionMethod 	$method
-	 * @param Listener				$listener
+	 * @param Listener 				$listener
 	 * @param string 				$msg
 	 */
 	private static function throwException(\ReflectionMethod $method, Listener $listener, $msg) {
