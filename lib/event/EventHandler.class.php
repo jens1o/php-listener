@@ -2,6 +2,15 @@
 
 namespace jens1o\event;
 
+
+/**
+ * The main class. Provides all event-related functions
+ *
+ * @author      Jens Hausdorf
+ * @copyright   2016 Jens Hausdorf
+ * @license     MIT License
+ * @package     jens1o\event
+ */
 class EventHandler {
 	
 	/**
