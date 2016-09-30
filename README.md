@@ -83,6 +83,7 @@ After all, we need to fire that:
 ```php
 <?php
 
+use example\events\GreetEvent;
 use jens1o\event\EventHandler;
 
 EventHandler::fireEvent(new GreetEvent());
