@@ -12,7 +12,8 @@ class EventHandler {
 	
 	/**
 	 * Registers all events in the given class
-	 * @param Listener $this
+	 *
+	 * @param 	Listener 	$listener 	The class where you want to register the events, it must inherit the Listener interface!
 	 */
 	public static function registerEvents(Listener $listener) {
 		// We need to go through each method...
@@ -43,8 +44,8 @@ class EventHandler {
 			if(!is_subclass_of($eventName, Event::class)) self::throwException($method, $listener, 'The event ' . $eventName . ' does not extend the '. Event::class . ' Class');
 
 			self::$listeners[$eventName][] = [
-					'listener' => $listener,
-					'method' => $method->getName()
+				'listener' => $listener,
+				'method' => $method->getName()
 			]; // When changing this, also change the method fireEvent!
 
 		}
@@ -53,7 +54,7 @@ class EventHandler {
 	/**
 	 * Executes all registered handlers
 	 * 
-	 * @param 	Event 	$event
+	 * @param 	Event 	$event 	The event class to fire
 	 */
 	public static function fireEvent(Event $event) {
 		
