@@ -2,7 +2,6 @@
 
 spl_autoload_register(function ($className) {
     $parts = explode('\\', $className);
-    var_dump($parts);
     if($parts[0] === 'jens1o') {
         // Our beer
         array_shift($parts);
