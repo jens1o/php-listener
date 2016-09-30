@@ -85,7 +85,7 @@ use jens1o\event\EventHandler;
 
 EventHandler::fireEvent(new GreetEvent());
 // or
-EventHandler::registerEvents(new GreetListener('Jens'));
+EventHandler::fireEvent(new GreetEvent('Jens'));
 // would output 'Hello Jens'
 
 ```
